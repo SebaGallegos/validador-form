@@ -67,6 +67,9 @@ function validarEmail(email) {
     return true;
 }
 
+// regex para validar contraseña
+// ^(?=.*[A-Z])(?=.*[0-9])(?=.*[.#_$-]).{8,}$
+
 // Función prinicipal que se ejecuta al cargar la página
 // Se encarga de validar el formulario
 document.getElementById("formulario").addEventListener("submit", function(e) {
