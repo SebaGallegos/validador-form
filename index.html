@@ -26,6 +26,12 @@
             <div class="mb-3">
                 <label for="inp-pass" class="form-label">Contraseña</label>
                 <input type="password" class="form-control" id="inp-pass">
+                <span id="pass-requisitos">
+                    <small id="req-mayus" class="text-danger d-block">Al menos una mayúscula.</small>
+                    <small id="req-num" class="text-danger d-block">Al menos un número.</small>
+                    <small id="req-especial" class="text-danger d-block">Al menos un carácter especial (. # - _).</small>
+                    <small id="req-largo" class="text-danger d-block">Al menos de una longitud de 8 caracteres.</small>
+                </span>
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
