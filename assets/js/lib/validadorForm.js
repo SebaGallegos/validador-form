@@ -79,14 +79,15 @@ function validarPass(pass) {
 
 // Función prinicipal que se ejecuta al cargar la página
 // Se encarga de validar el formulario
-document.getElementById("formulario").addEventListener("submit", function(e) {
+export default function validarForm(campoNombre, campoEmail, campoPass) {
+    document.getElementById("formulario").addEventListener("submit", function(e) {
     // Para evitar en primera instancia el envío del formulario
     e.preventDefault();
 
     // Se obtienen los campos del formulario
-    const nombre = document.getElementById("inp-nombre").value.trim();
-    const email = document.getElementById("inp-email").value.trim();
-    const pass = document.getElementById("inp-pass").value.trim();
+    const nombre = document.getElementById(campoNombre).value.trim();
+    const email = document.getElementById(campoEmail).value.trim();
+    const pass = document.getElementById(campoPass).value.trim();
 
     if (nombre === "" || email === "" || pass === "") {
         alert("Completa todos los campos.");
@@ -117,3 +118,4 @@ document.getElementById("inp-pass").addEventListener("input", function (e) {
     document.getElementById("req-especial").className = tieneEspecial ? "text-success d-block" : "text-danger d-block";
     document.getElementById("req-largo").className = tieneLargo ? "text-success d-block" : "text-danger d-block";
 });
+};
